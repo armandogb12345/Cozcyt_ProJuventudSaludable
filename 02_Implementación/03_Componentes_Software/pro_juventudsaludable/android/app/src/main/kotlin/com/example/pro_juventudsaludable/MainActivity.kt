@@ -1,4 +1,4 @@
-package com.example.pro_juventud_saludable
+package com.example.pro_juventudsaludable
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
