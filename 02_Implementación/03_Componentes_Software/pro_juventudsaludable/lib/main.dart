@@ -101,13 +101,22 @@ Widget build(BuildContext context){
              ],
             ),
         ),
-       SizedBox(height: 12.0),            
+       SizedBox(height: 11.0),            
     Container(
-      height: 45.0,
+      height: 70.0,
       child: ListView(
         children: <Widget>[
-          FlatButton.icon(                
-                   color: Colors.lightGreenAccent[400],                                      
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,              
+              children: <Widget>[ 
+          FlatButton.icon(  
+                  padding: EdgeInsets.only(
+                     top: 15,
+                     bottom: 15,
+                      right: 30,
+                      left: 30,                    
+                   ),              
+                   color: Colors.white,                                      
                    label: Text( "CONTINUAR"),                    
                   icon: Icon(Icons.info),                                     
                   onPressed: (){
@@ -119,6 +128,9 @@ Widget build(BuildContext context){
                       textColor: Colors.black,
                       highlightColor: Colors.white
                       ),
+              ]
+          ),
+
         ],
       ),
     )
