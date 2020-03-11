@@ -4,13 +4,13 @@ import 'package:carousel_pro/carousel_pro.dart';
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   title: '',
-  home: PorRespetoAmiYALosDemas(),
+  home: AntesDeElegirMeInformo(),
 ));
-class PorRespetoAmiYALosDemas extends StatefulWidget {
+class AntesDeElegirMeInformo extends StatefulWidget {
   @override
-  _PorRespetoAmiYALosDemasState createState() => _PorRespetoAmiYALosDemasState();
+  _AntesDeElegirMeInformoState createState() => _AntesDeElegirMeInformoState();
 }
-class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
+class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
   @override
   Widget build(BuildContext context) {
      Widget image_slider_carousel = Container(
@@ -18,11 +18,12 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
       child: Carousel(
         boxFit: BoxFit.fill,
         images: [
-          AssetImage('assets/SliderPantalla2/image1.jpg'),
-          AssetImage('assets/SliderPantalla2/image3.jpg'),
-          AssetImage('assets/SliderPantalla2/image4.jpg'),
-          AssetImage('assets/SliderPantalla2/image5.jpg'),
-          AssetImage('assets/SliderPantalla2/image7.jpg'),
+          AssetImage('assets/SliderPantalla4/image1.png'),
+          AssetImage('assets/SliderPantalla4/image2.jpg'),          
+          AssetImage('assets/SliderPantalla4/image3.jpg'),
+          AssetImage('assets/SliderPantalla4/image4.jpg'),
+          AssetImage('assets/SliderPantalla4/image5.jpg'),
+          AssetImage('assets/SliderPantalla4/image7.jpg'),
         ],
         indicatorBgPadding: 4.0,
         animationCurve: Curves.fastLinearToSlowEaseIn,
@@ -30,7 +31,7 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFF6200EA),
+      backgroundColor: Color(0XFFFFFF00),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -41,105 +42,115 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
         ),
         backgroundColor: Colors.transparent,
         elevation: 20.0,
-        title: Text('\POR RESPETO A MI\nY A LOS DEMAS', 
+        title: Text('\ANTES DE ELEGIR\nME INFORMO', 
         style: TextStyle(fontFamily: 'Armando',fontSize: 21.0, color: Colors.white)),
        centerTitle: true,
         ),
     body: ListView(children: <Widget>[image_slider_carousel,
     SizedBox(height: 10.0),        
         Container(
-          height: MediaQuery.of(context).size.height - 185.0,          
+          height: MediaQuery.of(context).size.height - 185.0, 
+          decoration: BoxDecoration(
+            color: Color(0XFF2196F3),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
+            ),           
            ///////////////////////////////////////////////             
             child: Column(     
-              children: <Widget>[                                                                                                                         
+              children: <Widget>[ 
+                SizedBox(height: 8.0),                                                                                                                        
                   Row(
               mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[                               
                  FlatButton(    
                    padding: EdgeInsets.only(
-                     top: 30,
-                     bottom: 30,
-                      right: 80,
-                      left: 80,                    
+                     top: 55,
+                     bottom: 55,
+                      right: 60,
+                      left: 60,                    
                    ),                               
                    color: Colors.white,                                      
-                   child: Text( "\nBULLYING\n",textAlign: TextAlign.center,),  
+                   child: Text( "IDENTIDAD DE\nGÉNERO",textAlign: TextAlign.center,),  
                   onPressed: (){},
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Colors.white
+                      highlightColor: Color(0XFF2196F3)
                       ), 
-              ]
-            ),  
-         Text('',
+                       Text('                                 ',
          textAlign: TextAlign.center,
          overflow: TextOverflow.ellipsis,
          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
          ),
+              ]
+            ),  
           Row(
               mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[
                 FlatButton(    
                    padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
+                     top: 30,
+                     bottom: 30,
                       right: 50,
                       left: 50,
                    ),                               
                    color: Colors.white,                                      
-                   child: Text( "\nVIOLENCIA\n",textAlign: TextAlign.center,),   
+                   child: Text( "\nSEXUALIDAD\n",textAlign: TextAlign.center,),   
                   onPressed: (){},
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Colors.white
+                      highlightColor: Color(0XFF2196F3)
                       ), 
-              ]
-            ),
-              Text('',
+                    Text('',
          textAlign: TextAlign.center,
          overflow: TextOverflow.ellipsis,
          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
          ),
+              ]
+            ),
           Row(
               mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[
+                Text('                                     ',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
                 FlatButton(    
                    padding: EdgeInsets.only(
                      top: 10,
                      bottom: 10,
-                      right: 35,
-                      left: 35,
+                      right: 50,
+                      left: 50,
                    ),                               
                    color: Colors.white,                                      
-                   child: Text( "\nACOSO\n",textAlign: TextAlign.center,),   
+                   child: Text( "\n        \n",textAlign: TextAlign.center,),   
                   onPressed: (){},
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Colors.white
+                      highlightColor: Color(0XFF2196F3)
                       ), 
               ]
             ),
-              Text('',
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,              
+              children: <Widget>[
+                 Text('                                                                    ',
          textAlign: TextAlign.center,
          overflow: TextOverflow.ellipsis,
          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
          ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
                 FlatButton(    
                    padding: EdgeInsets.only(
-                     top: 3,
-                     bottom: 3,
+                     top: 9,
+                     bottom: 9,
                       right: 0,
                       left: 0,
                    ),                               
                    color: Colors.white,                                      
                    child: Text( "\n",textAlign: TextAlign.center,),   
                   onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(150.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Colors.white
+                      highlightColor: Color(0XFF2196F3)
                       ), 
               ]
             ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:pro_juventudsaludable/PorRespetoAALDemas.dart';
+import 'package:pro_juventudsaludable/TengoUnaVidaSaludable.dart';
+import 'package:pro_juventudsaludable/AntesDeElegirMeInformo.dart';
+import 'package:pro_juventudsaludable/ConstruyoUnProyectoDeVida.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -99,7 +102,11 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                    ),                               
                    color: Colors.lightGreenAccent[400],                                      
                    child: Text( "\n\nTENGO UNA VIDA\nSALUDABLE\n\n",textAlign: TextAlign.center,),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => TengoUnaVidaSaludable()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white
@@ -128,7 +135,11 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                    ),                               
                    color: Colors.lightGreenAccent[400],                                      
                    child: Text( "\n\nANTES DE ELEGIR\nME INFORMO\n\n",textAlign: TextAlign.center,),  
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => AntesDeElegirMeInformo()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white
@@ -147,7 +158,11 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                    ),                               
                    color: Colors.lightGreenAccent[400],                                      
                    child: Text( "\n\nCONSTRUYO UN\nPROYECTO DE VIDA\n\n",textAlign: TextAlign.center,), 
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => ConstruyoUnProyectoDeVida()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white
