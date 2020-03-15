@@ -7,6 +7,8 @@ void main() => runApp(MaterialApp(
   home: AntesDeElegirMeInformo(),
 ));
 class AntesDeElegirMeInformo extends StatefulWidget {
+  final heroTag;
+  AntesDeElegirMeInformo({this.heroTag});
   @override
   _AntesDeElegirMeInformoState createState() => _AntesDeElegirMeInformoState();
 }
@@ -51,106 +53,138 @@ class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
         Container(
           height: MediaQuery.of(context).size.height - 185.0, 
           decoration: BoxDecoration(
-            color: Color(0XFF2196F3),
+            color: Colors.white,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
             ),           
            ///////////////////////////////////////////////             
             child: Column(     
-              children: <Widget>[ 
-                SizedBox(height: 8.0),                                                                                                                        
+              children: <Widget>[                                                                                                                         
                   Row(
               mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[                               
                  FlatButton(    
                    padding: EdgeInsets.only(
-                     top: 55,
-                     bottom: 55,
-                      right: 60,
-                      left: 60,                    
+                     top: 40,
+                     bottom: 40,
+                      right: 10,
+                      left: 10,                   
                    ),                               
-                   color: Colors.white,                                      
-                   child: Text( "IDENTIDAD DE\nGÉNERO",textAlign: TextAlign.center,),  
+                   color: Color(0XFF6200EA),                                      
+                   child: Text( "\IDENTIDAD DE\nGÉNERO",textAlign: TextAlign.center,),  
+                  onPressed: (){},
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
+                      textColor: Colors.white,
+                      highlightColor: Colors.white
+                      ), 
+              Text('                ',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
+              FlatButton(    
+                   padding: EdgeInsets.only(
+                     top: 20,
+                     bottom: 20,
+                      right: 20,
+                      left: 20,
+                   ),                               
+                   color: Color(0XFF6200EA),                                      
+                   child: Text( "\n",textAlign: TextAlign.center,),   
                   onPressed: (){},
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Color(0XFF2196F3)
+                      highlightColor: Colors.white
                       ), 
-                       Text('                                 ',
+              Text('         ',
          textAlign: TextAlign.center,
          overflow: TextOverflow.ellipsis,
          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
          ),
               ]
             ),  
+         Text('           ',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
           Row(
               mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[
                 FlatButton(    
                    padding: EdgeInsets.only(
-                     top: 30,
-                     bottom: 30,
-                      right: 50,
-                      left: 50,
+                     top: 20,
+                     bottom: 20,
+                      right: 20,
+                      left: 20,
                    ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\nSEXUALIDAD\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Color(0XFF2196F3)
-                      ), 
-                    Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              ]
-            ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                Text('                                     ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 10,
-                     bottom: 10,
-                      right: 50,
-                      left: 50,
-                   ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\n        \n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Color(0XFF2196F3)
-                      ), 
-              ]
-            ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                 Text('                                                                    ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 9,
-                     bottom: 9,
-                      right: 0,
-                      left: 0,
-                   ),                               
-                   color: Colors.white,                                      
+                   color: Color(0XFF6200EA),                                     
                    child: Text( "\n",textAlign: TextAlign.center,),   
                   onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(150.0)),                                      
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
-                      highlightColor: Color(0XFF2196F3)
+                      highlightColor: Colors.white
+                      ), 
+              Text('           ',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
+              FlatButton(    
+                   padding: EdgeInsets.only(
+                     top: 40,
+                     bottom: 40,
+                      right: 20,
+                      left: 20,
+                   ),                               
+                   color: Color(0XFF6200EA),                                    
+                   child: Text( "SEXUALIDAD\n         ",textAlign: TextAlign.center,),   
+                  onPressed: (){},
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
+                      textColor: Colors.white,
+                      highlightColor: Colors.white
+                      ), 
+              Text('',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
+              ]
+            ),   
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,              
+              children: <Widget>[
+                FlatButton(    
+                   padding: EdgeInsets.only(
+                     top: 35,
+                     bottom: 30,
+                      right: 55,
+                      left: 55,
+                   ),                               
+                   color: Color(0XFF6200EA),                                      
+                   child: Text( "\n        \n       \n",textAlign: TextAlign.center,),   
+                  onPressed: (){},
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
+                      textColor: Colors.white,
+                      highlightColor: Colors.white
+                      ), 
+                  Text('         ',
+         textAlign: TextAlign.center,
+         overflow: TextOverflow.ellipsis,
+         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
+         ),
+                FlatButton(    
+                   padding: EdgeInsets.only(
+                     top: 15,
+                     bottom: 15,
+                      right: 5,
+                      left: 5,
+                   ),                               
+                   color: Color(0XFF6200EA),                                      
+                   child: Text( "\        \n",textAlign: TextAlign.center,),   
+                  onPressed: (){},
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
+                      textColor: Colors.white,
+                      highlightColor: Colors.white
                       ), 
               ]
             ),

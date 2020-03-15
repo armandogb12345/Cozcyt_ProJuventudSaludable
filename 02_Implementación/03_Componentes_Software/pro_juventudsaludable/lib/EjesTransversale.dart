@@ -5,6 +5,7 @@ import 'package:pro_juventudsaludable/TengoUnaVidaSaludable.dart';
 import 'package:pro_juventudsaludable/AntesDeElegirMeInformo.dart';
 import 'package:pro_juventudsaludable/ConstruyoUnProyectoDeVida.dart';
 
+
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   title: '',
@@ -35,7 +36,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0xFF448AFF),
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -55,127 +56,176 @@ class _EjesTransversalesState extends State<EjesTransversales> {
         Container(
           height: MediaQuery.of(context).size.height - 185.0,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
+            color: Color(0XFFFAFAFA),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0)),
             ),     
            /////////////////////////////////////////////// 
-            padding: EdgeInsets.only(
-          top: 50,
-          bottom: 10,
-          right: 10,
-          left: 10
-        ),
             child: Column(     
-              children: <Widget>[                                                                                                                         
+              children: <Widget>[       
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                         child: _buildSubSistemaItem1('icons/1.png'),
+                        ),    
+                       Expanded(
+                        child: _buildSubSistemaItem11('icons/2.png'), 
+                       ),
+                      ],
+                    ),
                   Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[                               
-                 FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 12,
-                      left: 12,
-                   ),                               
-                   color: Colors.lightGreenAccent[400],                                      
-                   child: Text( "\n\nPOR RESPETO A\nMÍ Y A LOS DEMÁS\n\n",textAlign: TextAlign.center,), 
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => PorRespetoAmiYALosDemas()
-                    ));
-                   },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ),
-                   Text('     ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-                   FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 15,
-                      left: 15,
-                   ),                               
-                   color: Colors.lightGreenAccent[400],                                      
-                   child: Text( "\n\nTENGO UNA VIDA\nSALUDABLE\n\n",textAlign: TextAlign.center,),
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => TengoUnaVidaSaludable()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),  
-          Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-         Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 17,
-                      left: 17,
-                   ),                               
-                   color: Colors.lightGreenAccent[400],                                      
-                   child: Text( "\n\nANTES DE ELEGIR\nME INFORMO\n\n",textAlign: TextAlign.center,),  
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => AntesDeElegirMeInformo()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-             Text('     ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 10,
-                      left: 10,
-                   ),                               
-                   color: Colors.lightGreenAccent[400],                                      
-                   child: Text( "\n\nCONSTRUYO UN\nPROYECTO DE VIDA\n\n",textAlign: TextAlign.center,), 
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => ConstruyoUnProyectoDeVida()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ),
-              ]
-            ),
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                         child: _buildSubSistemaItem2('icons/3.png'),
+                        ),    
+                       Expanded(
+                        child: _buildSubSistemaItem22('icons/4.png'), 
+                       ),
+                      ],
+                    )
+                 
               ]
             )
             ),
     ],),
     );
   }
+  Widget _buildSubSistemaItem1(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:5.0, right:5.0, top: 30.0),
+    child: InkWell(
+      onTap: () {     
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => PorRespetoAmiYALosDemas(heroTag: imgPath),
+                    ));
+        },        
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 160.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
 }
+Widget _buildSubSistemaItem11(String imgPath2){
+  return Padding(
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 1.0),
+    child: InkWell(
+      onTap: () { 
+         Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => TengoUnaVidaSaludable(heroTag: imgPath2)
+                    ));
+        },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[          
+        Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath2,
+                  child: Image(                    
+                    image:AssetImage(imgPath2),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 160.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+
+Widget _buildSubSistemaItem2(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:0.0, right:0.0, top: 1.0),
+    child: InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => AntesDeElegirMeInformo(heroTag: imgPath)
+                    ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 180.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem22(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:5.0, right:5.0, top: 1.0),
+    child: InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ConstruyoUnProyectoDeVida(heroTag: imgPath)
+                    ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+        Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 160.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+}
+
+
+
+
+
 
 
 

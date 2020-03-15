@@ -7,6 +7,8 @@ void main() => runApp(MaterialApp(
   home: ConstruyoUnProyectoDeVida(),
 ));
 class ConstruyoUnProyectoDeVida extends StatefulWidget {
+  final heroTag;
+  ConstruyoUnProyectoDeVida({this.heroTag});
   @override
   _ConstruyoUnProyectoDeVidaState createState() => _ConstruyoUnProyectoDeVidaState();
 }

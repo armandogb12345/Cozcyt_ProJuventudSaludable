@@ -7,6 +7,8 @@ void main() => runApp(MaterialApp(
   home: TengoUnaVidaSaludable(),
 ));
 class TengoUnaVidaSaludable extends StatefulWidget {
+  final heroTag;
+  TengoUnaVidaSaludable({this.heroTag});
   @override
   _TengoUnaVidaSaludableState createState() => _TengoUnaVidaSaludableState();
 }

@@ -7,6 +7,8 @@ void main() => runApp(MaterialApp(
   home: PorRespetoAmiYALosDemas(),
 ));
 class PorRespetoAmiYALosDemas extends StatefulWidget {
+  final heroTag;
+  PorRespetoAmiYALosDemas({this.heroTag});
   @override
   _PorRespetoAmiYALosDemasState createState() => _PorRespetoAmiYALosDemasState();
 }
@@ -30,7 +32,7 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFF6200EA),
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
