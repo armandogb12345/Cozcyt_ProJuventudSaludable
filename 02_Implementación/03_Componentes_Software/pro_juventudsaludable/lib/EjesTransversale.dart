@@ -36,7 +36,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
       ),
     );
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0XFFF5F5F5),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -56,7 +56,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
         Container(
           height: MediaQuery.of(context).size.height - 185.0,
           decoration: BoxDecoration(
-            color: Color(0XFFFAFAFA),
+            color: Color(0XFFF5F5F5),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0)),
             ),     
            /////////////////////////////////////////////// 
@@ -93,7 +93,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
   }
   Widget _buildSubSistemaItem1(String imgPath){
   return Padding(
-    padding: EdgeInsets.only(left:5.0, right:5.0, top: 30.0),
+    padding: EdgeInsets.only(left:25.0, right:5.0, top: 40.0),
     child: InkWell(
       onTap: () {     
         Navigator.of(context).push(MaterialPageRoute(
@@ -111,8 +111,8 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                   child: Image(
                     image:AssetImage(imgPath),
                     fit: BoxFit.cover,
-                    height: 160.0,
-                    width: 160.0
+                    height: 130.0,
+                    width: 150.0
                   )
                 ),
               ]
