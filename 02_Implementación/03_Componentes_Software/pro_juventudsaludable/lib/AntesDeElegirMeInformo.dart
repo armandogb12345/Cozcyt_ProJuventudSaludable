@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:pro_juventudsaludable/IdentidadDeGenero.dart';
+import 'package:pro_juventudsaludable/Sexualidad.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -71,7 +73,11 @@ class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\IDENTIDAD DE\nGÉNERO",textAlign: TextAlign.center,),  
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => IdentidadDeGenero()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -138,7 +144,11 @@ class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
                    ),                               
                    color: Color(0XFF6200EA),                                    
                    child: Text( "SEXUALIDAD\n         ",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Sexualidad()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white

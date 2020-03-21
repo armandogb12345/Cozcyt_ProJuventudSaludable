@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:pro_juventudsaludable/HabitosActividadFisica.dart';
+import 'package:pro_juventudsaludable/HabitosAlimenticios.dart';
+import 'package:pro_juventudsaludable/CartillaDeSalud.dart';
+import 'package:pro_juventudsaludable/Adicciones.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -70,7 +74,11 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\HÁBITOS\nACTIVIDAD FÍSICA",textAlign: TextAlign.center,),  
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => HabitosActividadFisica()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -137,7 +145,11 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
                    ),                               
                    color: Color(0XFF6200EA),                                    
                    child: Text( "HÁBITOS\nALIMENTICIOS",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => HabitosAlimenticios()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -161,7 +173,11 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\nCARTILLA \nDE SALUD\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => CartillaDeSalud()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -180,7 +196,11 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\nADICCIONES\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Adicciones()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white

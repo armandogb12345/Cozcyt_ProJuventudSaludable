@@ -36,7 +36,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFFF5F5F5),
+      backgroundColor: Color(0XFFFAFAFA),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -56,7 +56,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
         Container(
           height: MediaQuery.of(context).size.height - 185.0,
           decoration: BoxDecoration(
-            color: Color(0XFFF5F5F5),
+            color: Color(0XFFFAFAFA),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0)),
             ),     
            /////////////////////////////////////////////// 

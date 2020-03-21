@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:pro_juventudsaludable/Bulling.dart';
+import 'package:pro_juventudsaludable/Violencia.dart';
+import 'package:pro_juventudsaludable/Acoso.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -66,7 +69,11 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
                    ),                               
                    color: Colors.white,                                      
                    child: Text( "\nBULLYING\n",textAlign: TextAlign.center,),  
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Bulling()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white
@@ -90,7 +97,11 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
                    ),                               
                    color: Colors.white,                                      
                    child: Text( "\nVIOLENCIA\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Violencia()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white
@@ -114,7 +125,11 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
                    ),                               
                    color: Colors.white,                                      
                    child: Text( "\nACOSO\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Acoso()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.black,
                       highlightColor: Colors.white

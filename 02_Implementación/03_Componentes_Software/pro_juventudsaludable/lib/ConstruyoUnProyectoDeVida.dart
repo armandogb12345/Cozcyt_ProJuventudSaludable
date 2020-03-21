@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:pro_juventudsaludable/Aspiraciones.dart';
+import 'package:pro_juventudsaludable/Intereses.dart';
+import 'package:pro_juventudsaludable/PreferenciasDeEstudios.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -71,7 +74,11 @@ class _ConstruyoUnProyectoDeVidaState extends State<ConstruyoUnProyectoDeVida> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\ASPIRACIONES",textAlign: TextAlign.center,),  
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Aspiraciones()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -138,7 +145,11 @@ class _ConstruyoUnProyectoDeVidaState extends State<ConstruyoUnProyectoDeVida> {
                    ),                               
                    color: Color(0XFF6200EA),                                    
                    child: Text( "PREFERENCIAS\nDE ESTUDIOS",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => PreferenciasDeEstudios()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
@@ -162,7 +173,11 @@ class _ConstruyoUnProyectoDeVidaState extends State<ConstruyoUnProyectoDeVida> {
                    ),                               
                    color: Color(0XFF6200EA),                                      
                    child: Text( "\nINTERESES\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => Intereses()
+                    ));
+                  },
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
                       textColor: Colors.white,
                       highlightColor: Colors.white
