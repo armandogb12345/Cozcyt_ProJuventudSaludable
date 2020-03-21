@@ -36,7 +36,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFFFAFAFA),
+      backgroundColor: Color(0XFFCFD8DC),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -54,9 +54,9 @@ class _EjesTransversalesState extends State<EjesTransversales> {
     body: ListView(children: <Widget>[image_slider_carousel,
     SizedBox(height: 15.0),        
         Container(
-          height: MediaQuery.of(context).size.height - 185.0,
+          height: MediaQuery.of(context).size.height - 240.0,
           decoration: BoxDecoration(
-            color: Color(0XFFFAFAFA),
+            color: Color(0XFFCFD8DC),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0)),
             ),     
            /////////////////////////////////////////////// 
@@ -66,10 +66,10 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                       crossAxisAlignment: CrossAxisAlignment.center,                    
                       children: [   
                         Expanded(
-                         child: _buildSubSistemaItem1('icons/1.png'),
+                         child: _buildSubSistemaItem1('icons/EjesTrans/1.jpeg'),
                         ),    
                        Expanded(
-                        child: _buildSubSistemaItem11('icons/2.png'), 
+                        child: _buildSubSistemaItem11('icons/EjesTrans/2.jpeg'), 
                        ),
                       ],
                     ),
@@ -77,10 +77,10 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                       crossAxisAlignment: CrossAxisAlignment.center,                    
                       children: [   
                         Expanded(
-                         child: _buildSubSistemaItem2('icons/3.png'),
+                         child: _buildSubSistemaItem2('icons/EjesTrans/3.jpeg'),
                         ),    
                        Expanded(
-                        child: _buildSubSistemaItem22('icons/4.png'), 
+                        child: _buildSubSistemaItem22('icons/EjesTrans/4.jpeg'), 
                        ),
                       ],
                     )
@@ -93,7 +93,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
   }
   Widget _buildSubSistemaItem1(String imgPath){
   return Padding(
-    padding: EdgeInsets.only(left:25.0, right:5.0, top: 40.0),
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 20.0),
     child: InkWell(
       onTap: () {     
         Navigator.of(context).push(MaterialPageRoute(
@@ -111,8 +111,8 @@ class _EjesTransversalesState extends State<EjesTransversales> {
                   child: Image(
                     image:AssetImage(imgPath),
                     fit: BoxFit.cover,
-                    height: 130.0,
-                    width: 150.0
+                    height: 160.0,
+                    width: 165.0
                   )
                 ),
               ]
@@ -125,7 +125,7 @@ class _EjesTransversalesState extends State<EjesTransversales> {
 }
 Widget _buildSubSistemaItem11(String imgPath2){
   return Padding(
-    padding: EdgeInsets.only(left:10.0, right:5.0, top: 1.0),
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 20.0),
     child: InkWell(
       onTap: () { 
          Navigator.of(context).push(MaterialPageRoute(
@@ -158,7 +158,7 @@ Widget _buildSubSistemaItem11(String imgPath2){
 
 Widget _buildSubSistemaItem2(String imgPath){
   return Padding(
-    padding: EdgeInsets.only(left:0.0, right:0.0, top: 1.0),
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 15.0),
     child: InkWell(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
@@ -176,8 +176,8 @@ Widget _buildSubSistemaItem2(String imgPath){
                   child: Image(
                     image:AssetImage(imgPath),
                     fit: BoxFit.cover,
-                    height: 180.0,
-                    width: 180.0
+                    height: 160.0,
+                    width: 165.0
                   )
                 ),
               ]
@@ -190,7 +190,7 @@ Widget _buildSubSistemaItem2(String imgPath){
 }
 Widget _buildSubSistemaItem22(String imgPath){
   return Padding(
-    padding: EdgeInsets.only(left:5.0, right:5.0, top: 1.0),
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 15.0),
     child: InkWell(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(

@@ -19,23 +19,17 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
   @override
   Widget build(BuildContext context) {
      Widget image_slider_carousel = Container(
-      height: 150,
+      height: 190,
       child: Carousel(
         boxFit: BoxFit.fill,
         images: [
-          AssetImage('assets/SliderPantalla2/image1.jpg'),
-          AssetImage('assets/SliderPantalla2/image3.jpg'),
-          AssetImage('assets/SliderPantalla2/image4.jpg'),
-          AssetImage('assets/SliderPantalla2/image5.jpg'),
-          AssetImage('assets/SliderPantalla2/image7.jpg'),
+          AssetImage('icons/EjesTrans/1.jpeg'),
         ],
-        indicatorBgPadding: 4.0,
-        animationCurve: Curves.fastLinearToSlowEaseIn,
-        animationDuration: Duration(milliseconds: 2000),
+        indicatorBgPadding: 0.0,
       ),
     );
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFFFFB74D),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -50,120 +44,143 @@ class _PorRespetoAmiYALosDemasState extends State<PorRespetoAmiYALosDemas> {
         style: TextStyle(fontFamily: 'Armando',fontSize: 21.0, color: Colors.white)),
        centerTitle: true,
         ),
-    body: ListView(children: <Widget>[image_slider_carousel,
+    body: ListView(children: <Widget>[image_slider_carousel,    
     SizedBox(height: 10.0),        
         Container(
-          height: MediaQuery.of(context).size.height - 185.0,          
+          height: MediaQuery.of(context).size.height - 185.0,   
+          decoration: BoxDecoration(
+            color: Color(0XFFCFD8DC),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
+            ),       
            ///////////////////////////////////////////////             
-            child: Column(     
-              children: <Widget>[                                                                                                                         
+           child: Column(     
+              children: <Widget>[ 
+                Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                        child: _buildSubSistemaItem1('icons/PorRespA/1.jpeg'),
+                        ), 
+                      ],
+                    ) ,     
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [     
+                       Expanded(
+                        child: _buildSubSistemaItem2('icons/PorRespA/3.jpeg'),
+                       ),
+                      ],
+                    ),
                   Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[                               
-                 FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 30,
-                     bottom: 30,
-                      right: 80,
-                      left: 80,                    
-                   ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\nBULLYING\n",textAlign: TextAlign.center,),  
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => Bulling()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),  
-         Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
-                      right: 50,
-                      left: 50,
-                   ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\nVIOLENCIA\n",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => Violencia()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),
-              Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 10,
-                     bottom: 10,
-                      right: 35,
-                      left: 35,
-                   ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\nACOSO\n",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => Acoso()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),
-              Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 3,
-                     bottom: 3,
-                      right: 0,
-                      left: 0,
-                   ),                               
-                   color: Colors.white,                                      
-                   child: Text( "\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                        child: _buildSubSistemaItem11('icons/PorRespA/2.jpeg'), 
+                        ), 
+                      ],
+                    )
+                 
               ]
             )
             ),
     ],),
     );
   }
+  Widget _buildSubSistemaItem1(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:90.0, right:90.0, top: 10.0),
+    child: InkWell(
+      onTap: () {     
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Acoso(heroTag: imgPath),
+                    ));
+        },        
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 130.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
 }
+Widget _buildSubSistemaItem11(String imgPath2){
+  return Padding(
+    padding: EdgeInsets.only(left:90.0, right:90.0, top: 20.0),
+    child: InkWell(
+      onTap: () { 
+         Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Violencia(heroTag: imgPath2)
+                    ));
+        },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[          
+        Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath2,
+                  child: Image(                    
+                    image:AssetImage(imgPath2),
+                    fit: BoxFit.cover,
+                    height: 130.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem2(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:90.0, right:90.0, top: 20.0),
+    child: InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Bulling(heroTag: imgPath)
+                    ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 130.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+}          
+         

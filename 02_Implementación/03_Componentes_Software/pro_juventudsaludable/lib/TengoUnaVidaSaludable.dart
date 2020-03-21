@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:pro_juventudsaludable/HabitosActividadFisica.dart';
 import 'package:pro_juventudsaludable/HabitosAlimenticios.dart';
-import 'package:pro_juventudsaludable/CartillaDeSalud.dart';
+import 'package:pro_juventudsaludable/TiempoLibre.dart';
 import 'package:pro_juventudsaludable/Adicciones.dart';
 
 void main() => runApp(MaterialApp(
@@ -20,23 +20,17 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
   @override
   Widget build(BuildContext context) {
      Widget image_slider_carousel = Container(
-      height: 150,
+      height: 200,
       child: Carousel(
         boxFit: BoxFit.fill,
         images: [
-          AssetImage('assets/SliderPantalla3/image1.jpg'),          
-          AssetImage('assets/SliderPantalla3/image2.png'),
-          AssetImage('assets/SliderPantalla3/image3.jpg'),
-          AssetImage('assets/SliderPantalla3/image4.jpg'),
-          AssetImage('assets/SliderPantalla3/image5.jpg'),
+          AssetImage('icons/EjesTrans/2.jpeg'),  
         ],
-        indicatorBgPadding: 4.0,
-        animationCurve: Curves.fastLinearToSlowEaseIn,
-        animationDuration: Duration(milliseconds: 2000),
+        indicatorBgPadding: 0.0,
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFFFFFF00),
+      backgroundColor: Color(0xFF689F38),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -54,163 +48,168 @@ class _TengoUnaVidaSaludableState extends State<TengoUnaVidaSaludable> {
     body: ListView(children: <Widget>[image_slider_carousel,
     SizedBox(height: 10.0),        
         Container(
-          height: MediaQuery.of(context).size.height - 185.0,
+          height: MediaQuery.of(context).size.height - 230.0,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
+            color: Color(0XFFCFD8DC),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(65.0), topRight: Radius.circular(65.0)),
             ),           
            ///////////////////////////////////////////////             
             child: Column(     
               children: <Widget>[                                                                                                                         
-                  Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[                               
-                 FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 40,
-                     bottom: 40,
-                      right: 10,
-                      left: 10,                   
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\HÁBITOS\nACTIVIDAD FÍSICA",textAlign: TextAlign.center,),  
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => HabitosActividadFisica()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              Text('                ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              Text('         ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              ]
-            ),  
-         Text('           ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                     
-                   child: Text( "\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              Text('           ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 40,
-                     bottom: 40,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                    
-                   child: Text( "HÁBITOS\nALIMENTICIOS",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => HabitosAlimenticios()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              ]
-            ),   
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 35,
-                     bottom: 30,
-                      right: 35,
-                      left: 35,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\nCARTILLA \nDE SALUD\n",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => CartillaDeSalud()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-                  Text('         ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 5,
-                      left: 5,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\nADICCIONES\n",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => Adicciones()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),
+                   Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                        child: _buildSubSistemaItem1('icons/VidaSalu/3.jpeg'),
+                        ), 
+                        Expanded(
+                        child: _buildSubSistemaItem11('icons/VidaSalu/2.jpeg'),
+                        ), 
+                      ],
+                    ) ,     
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [     
+                       Expanded(
+                        child: _buildSubSistemaItem2('icons/VidaSalu/4.jpeg'),
+                       ),
+                       Expanded(
+                        child: _buildSubSistemaItem22('icons/VidaSalu/1.jpeg'),
+                       ),
+                      ],
+                    ),
               ]
             )
             ),
     ],),
     );
   }
+   Widget _buildSubSistemaItem1(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 35.0),
+    child: InkWell(
+      onTap: () {     
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => HabitosActividadFisica(heroTag: imgPath),
+                    ));
+        },        
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 165.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem11(String imgPath2){
+  return Padding(
+    padding: EdgeInsets.only(left:6.0, right:9.0, top: 35.0),
+    child: InkWell(
+      onTap: () { 
+         Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => HabitosAlimenticios(heroTag: imgPath2)
+                    ));
+        },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[          
+        Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath2,
+                  child: Image(                    
+                    image:AssetImage(imgPath2),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 165.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem2(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 20.0),
+    child: InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => TiempoLibre(heroTag: imgPath)
+                    ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 165.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem22(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:10.0, right:5.0, top: 20.0),
+    child: InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Adicciones(heroTag: imgPath)
+                    ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 160.0,
+                    width: 165.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
 }

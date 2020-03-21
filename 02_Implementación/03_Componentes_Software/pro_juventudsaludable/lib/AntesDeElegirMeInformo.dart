@@ -18,24 +18,17 @@ class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
   @override
   Widget build(BuildContext context) {
      Widget image_slider_carousel = Container(
-      height: 150,
+      height: 200,
       child: Carousel(
         boxFit: BoxFit.fill,
         images: [
-          AssetImage('assets/SliderPantalla4/image1.png'),
-          AssetImage('assets/SliderPantalla4/image2.jpg'),          
-          AssetImage('assets/SliderPantalla4/image3.jpg'),
-          AssetImage('assets/SliderPantalla4/image4.jpg'),
-          AssetImage('assets/SliderPantalla4/image5.jpg'),
-          AssetImage('assets/SliderPantalla4/image7.jpg'),
+          AssetImage('icons/EjesTrans/3.jpeg'),
         ],
-        indicatorBgPadding: 4.0,
-        animationCurve: Curves.fastLinearToSlowEaseIn,
-        animationDuration: Duration(milliseconds: 2000),
+        indicatorBgPadding: 0.0,
       ),
     );
     return Scaffold(
-      backgroundColor: Color(0XFFFFFF00),
+      backgroundColor: Colors.red,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -53,155 +46,98 @@ class _AntesDeElegirMeInformoState extends State<AntesDeElegirMeInformo> {
     body: ListView(children: <Widget>[image_slider_carousel,
     SizedBox(height: 10.0),        
         Container(
-          height: MediaQuery.of(context).size.height - 185.0, 
+          height: MediaQuery.of(context).size.height - 270.0, 
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Color(0XFFCFD8DC),
             borderRadius: BorderRadius.only(topLeft: Radius.circular(85.0), topRight: Radius.circular(85.0)),
             ),           
            ///////////////////////////////////////////////             
             child: Column(     
-              children: <Widget>[                                                                                                                         
-                  Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[                               
-                 FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 40,
-                     bottom: 40,
-                      right: 10,
-                      left: 10,                   
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\IDENTIDAD DE\nGÉNERO",textAlign: TextAlign.center,),  
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => IdentidadDeGenero()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              Text('                ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              Text('         ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              ]
-            ),  
-         Text('           ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
               children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 20,
-                     bottom: 20,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                     
-                   child: Text( "\n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.black,
-                      highlightColor: Colors.white
-                      ), 
-              Text('           ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 40,
-                     bottom: 40,
-                      right: 20,
-                      left: 20,
-                   ),                               
-                   color: Color(0XFF6200EA),                                    
-                   child: Text( "SEXUALIDAD\n         ",textAlign: TextAlign.center,),   
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => Sexualidad()
-                    ));
-                  },
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              Text('',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-              ]
-            ),   
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,              
-              children: <Widget>[
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 35,
-                     bottom: 30,
-                      right: 55,
-                      left: 55,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\n        \n       \n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-                  Text('         ',
-         textAlign: TextAlign.center,
-         overflow: TextOverflow.ellipsis,
-         style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'nombrefuente'),
-         ),
-                FlatButton(    
-                   padding: EdgeInsets.only(
-                     top: 15,
-                     bottom: 15,
-                      right: 5,
-                      left: 5,
-                   ),                               
-                   color: Color(0XFF6200EA),                                      
-                   child: Text( "\        \n",textAlign: TextAlign.center,),   
-                  onPressed: (){},
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),                                      
-                      textColor: Colors.white,
-                      highlightColor: Colors.white
-                      ), 
-              ]
-            ),
+                 Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [   
+                        Expanded(
+                        child: _buildSubSistemaItem1('icons/AntesDeEleg/1.jpeg'),
+                        ), 
+                      ],
+                    ) ,     
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,                    
+                      children: [     
+                       Expanded(
+                        child: _buildSubSistemaItem2('icons/AntesDeEleg/2.jpeg'),
+                       ),
+                      ],
+                    ),
               ]
             )
             ),
     ],),
     );
   }
+   Widget _buildSubSistemaItem1(String imgPath){
+  return Padding(
+    padding: EdgeInsets.only(left:90.0, right:90.0, top: 13.0),
+    child: InkWell(
+      onTap: () {     
+        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Sexualidad(heroTag: imgPath),
+                    ));
+        },        
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath,
+                  child: Image(
+                    image:AssetImage(imgPath),
+                    fit: BoxFit.cover,
+                    height: 155.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
+Widget _buildSubSistemaItem2(String imgPath2){
+  return Padding(
+    padding: EdgeInsets.only(left:90.0, right:90.0, top: 22.0),
+    child: InkWell(
+      onTap: () { 
+         Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => IdentidadDeGenero(heroTag: imgPath2)
+                    ));
+        },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[          
+        Container(
+            child: Row(
+              children: [
+                Hero(
+                  tag: imgPath2,
+                  child: Image(                    
+                    image:AssetImage(imgPath2),
+                    fit: BoxFit.cover,
+                    height: 155.0,
+                    width: 180.0
+                  )
+                ),
+              ]
+            )
+          ),
+        ]
+      ),
+    ),
+  );
+}
 }
