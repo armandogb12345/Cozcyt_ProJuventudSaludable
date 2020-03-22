@@ -79,6 +79,7 @@ flutter:
       - icons/ProyectoDeVida/2.jpeg
       - icons/ProyectoDeVida/3.jpeg
       # Slider Pantalla 1
+      - assets/LogoLABSOL/logoLabsol.PNG
       - assets/SliderPantalla1/image1.jpg
       - assets/SliderPantalla1/image3.jpg
       - assets/SliderPantalla1/image4.jpg
